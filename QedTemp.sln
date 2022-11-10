@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QedTemp", "QedTemp.csproj", "{1A2B4000-66C1-4F35-BDB8-B5B59CCEF440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A2B4000-66C1-4F35-BDB8-B5B59CCEF440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2B4000-66C1-4F35-BDB8-B5B59CCEF440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2B4000-66C1-4F35-BDB8-B5B59CCEF440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2B4000-66C1-4F35-BDB8-B5B59CCEF440}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAA302E2-D314-430E-9E5A-1C1CF388EA47}
+	EndGlobalSection
+EndGlobal
