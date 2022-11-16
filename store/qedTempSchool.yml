@@ -25,7 +25,7 @@ paths:
       tags:
         - school
       summary: Get all schools
-      description: Returns a list of schools
+      description: Returns a list of schools. For more information, click on https://jamatya.github.io/ .
       operationId: getAllSchools
       responses:
         '200':
