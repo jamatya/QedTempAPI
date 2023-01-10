@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: System
 metadata:
-  name: backstage
+  name: my-dev-portal
   description: |
-    Backstage is an open-source developer portal that puts the developer experience first.
+    My-dev-portal is an open-source developer portal that puts the developer experience first.
   links:
     - title: Website
       url: http://backstage.io
@@ -18,6 +18,5 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     lighthouse.com/website-url: https://backstage.io
 spec:
-  type: library
-  owner: CNCF
-  lifecycle: experimental
+  owner: dp-team
+  domain: devPortal
