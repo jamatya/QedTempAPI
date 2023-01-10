@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: api-portal
+  description: Portal to manage APIs
+spec:
+  owner: dp-team
+  domain: devPortal
