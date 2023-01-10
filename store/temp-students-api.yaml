@@ -9,7 +9,7 @@ spec:
   owner: dp-team
   system: api-portal
   definition: |  
-      openapi: 3.0.3
+    openapi: 3.0.3
     info:
       title: QED Temp Students API - OpenAPI 3.0
       description: 'This is a temporary API that contains mock data related to QED'
