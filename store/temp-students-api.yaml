@@ -1,4 +1,3 @@
----
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
@@ -9,7 +8,7 @@ spec:
   lifecycle: production
   owner: dp-team
   system: api-portal
-  definition: |
+  definition: |  
     openapi: 3.0.3
     info:
       title: QED Temp Students API - OpenAPI 3.0
@@ -26,42 +25,42 @@ spec:
       - url: https://localhost:7230/api/
       - url: http://localhost:5084/api/
     tags:
-      - name: student
-        description: Operations related to students
+      - name: school
+        description: Operations related to schools
         externalDocs:
           description: Find out more
           url: http://swagger.io 
     paths:
-      /students/:
+      /schools/:
         get:
           tags:
-            - student
-          summary: Get all students
-          description: Returns a list of schools
-          operationId: getAllStudents
+            - school
+          summary: Get all schools
+          description: Returns a list of schools. For more information, click on https://jamatya.github.io/ .
+          operationId: getAllSchools
           responses:
             '200':
               description: successful operation
               content:
                 application/json:
                   schema:
-                    $ref: '#/components/schemas/Student'
+                    $ref: '#/components/schemas/School'
                 application/xml:  
                   schema:
-                    $ref: '#/components/schemas/Student'
+                    $ref: '#/components/schemas/School'
             '404':
-              description: Students not found
-      /students/{id}:
+              description: Schools not found
+      /schools/{id}:
         get:
           tags:
-            - student
-          summary: Find student by ID
-          description: Returns a student 
-          operationId: getStudentById
+            - school
+          summary: Find school by ID
+          description: Returns a single school
+          operationId: getSchoolById
           parameters:
             - name: id
               in: path
-              description: ID of the student to return
+              description: ID of the school to return
               required: true
               schema:
                 type: integer
@@ -72,46 +71,30 @@ spec:
               content:
                 application/json:
                   schema:
-                    $ref: '#/components/schemas/Student'          
+                    $ref: '#/components/schemas/School'          
                 application/xml:
                   schema:
-                    $ref: '#/components/schemas/Student'
+                    $ref: '#/components/schemas/School'
             '400':
               description: Invalid ID supplied
             '404':
-              description: Student not found
+              description: School not found
     components:
       schemas:
-        Student:
+        School:
           type: object
           properties:
-            enrolmentid:
+            id:
               type: integer
               format: int64
               example: 1
-            familyname:
+            name:
               type: string
-              example: Doe
-            givenname:
+              example: Sherwood State School
+            type:
               type: string
-              example: Jane 
-            dateofbirth:
-              type: string
-              format: date-time
-              example: 2015-05-05
-            age:
+              example: Public 
+            ranking:
               type: integer
               format: int64
-              example: 7
-            rollclass:
-              type: string
-              example: NA
-            gender:
-              type: string
-              example: F
-            yearlevel:
-              type: string
-              example: 5G
-            enrolmentStatus:
-              type: string
-              example: Active
+              example: 3
