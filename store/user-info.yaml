@@ -1,8 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: jdoe
-  description: The team
+  name: jdoe  
 spec:
   profile:
     displayName: Jane Doe
