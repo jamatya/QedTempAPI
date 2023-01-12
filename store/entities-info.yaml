@@ -1,0 +1,42 @@
+---
+    # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+    apiVersion: backstage.io/v1alpha1
+    kind: System
+    metadata:
+      name: dp_site
+    spec:
+      owner: dp_team
+    ---
+    # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+    apiVersion: backstage.io/v1alpha1
+    kind: Component
+    metadata:
+      name: dp-website
+    spec:
+      type: website
+      lifecycle: experimental
+      owner: dp_team
+      system: dp_site
+      providesApis: [dp-students-api]
+    ---
+    # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+    apiVersion: backstage.io/v1alpha1
+    kind: API
+    metadata:
+      name: dp-students-api
+    spec:
+      type: grpc
+      lifecycle: experimental
+      owner: dp_team
+      system: dp_site
+      definition: |
+        syntax = "proto3";
+    
+        service Exampler {
+          rpc Example (ExampleMessage) returns (ExampleMessage) {};
+        }
+    
+        message ExampleMessage {
+          string example = 1;
+        };
+    
